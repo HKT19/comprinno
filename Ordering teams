@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t=0,i;
+	cin >> t;
+	while(t--) {
+	    int a[3],b[3],c[3];
+	    for(i=0; i<3; i++)
+	        cin>>a[i];
+	   for(i=0; i<3; i++)
+	        cin>>b[i];
+	   for(i=0; i<3; i++)
+	        cin>>c[i];
+	       
+	    
+	    bool flag = false;
+	    if((b[0]==c[0] && b[1]==c[1] && b[2]==c[2]) || (a[0]==c[0] && a[1]==c[1] && a[2]==c[2]) || (b[0]==a[0] && b[1]==a[1] && b[2]==a[2])) flag = false;
+	    else if(a[0]>=b[0] && a[1]>=b[1] && a[2]>=b[2]) {
+	        if(b[0]>=c[0] && b[1]>=c[1] && b[2]>=c[2]) flag = true;
+	        else if(c[0]>=a[0] && c[1]>=a[1] && c[2]>=a[2]) flag = true;
+	        else if ((c[0]<=a[0] && c[1]<=a[1] && c[2]<=a[2]) && (b[0]<=c[0] && b[1]<=c[1] && b[2]<=c[2])) flag = true;
+	    } else if(b[0]>=a[0] && b[1]>=a[1] && b[2]>=a[2]) {
+	        if(a[0]>=c[0] && a[1]>=c[1] && a[2]>=c[2]) flag = true;
+	        else if(c[0]>=b[0] && c[1]>=b[1] && c[2]>=b[2]) flag = true;
+	        else if ((c[0]<=b[0] && c[1]<=b[1] && c[2]<=b[2]) && (a[0]<=c[0] && a[1]<=c[1] && a[2]<=c[2])) flag = true;
+	    }
+	    
+	    if(flag) cout << "yes\n";
+	    else cout << "no\n";
+	}
+	return 0;
+}
