@@ -1,0 +1,89 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t,i,flag=1;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {
+        flag=1;
+        char s[100001];
+        int no[26]={0},ans[26]={0},c=0;
+        cin>>s;
+        int j=0,k;
+
+        while(s[j]!='\0')
+        {
+            no[s[j]-97]++;
+            j++;
+        }
+
+        for(j=0;j<26;j++)
+        {
+            if(no[j]!=0)
+            {
+                ans[c]=no[j];
+                c++;
+            }
+        }
+        if(c>=3)
+        {
+
+        for(j=0;j<c;j++)
+        {
+            for(k=j+1;k<c;k++)
+            {
+                if(ans[j]>ans[k])
+                {
+                    int temp=ans[j];
+                    ans[j]=ans[k];
+                    ans[k]=temp;
+
+                }
+            }
+        }
+
+        for(j=2;j<c;j++)
+        {
+            if(ans[j]==(ans[j-1]+ans[j-2]))
+            {
+                flag=1;
+            }
+            else
+            {
+                flag=0;
+                break;
+            }
+        }
+
+
+        if(flag==0)
+        {
+            int temp=ans[0];
+            ans[0]=ans[1];
+            ans[1]=temp;
+            for(j=2;j<c;j++)
+        {
+            if(ans[j]==(ans[j-1]+ans[j-2]))
+            {
+                flag=1;
+            }
+            else
+            {
+                flag=0;
+                break;
+            }
+        }
+        }
+
+        if(flag==1)
+            cout<<"Dynamic\n";
+        else
+            cout<<"Not\n";
+
+    }
+    else
+        cout<<"Dynamic\n";
+}
+}
+   
