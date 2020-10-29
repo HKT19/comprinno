@@ -31,7 +31,6 @@
     		llong L = readInteger();
  
  
- 
     		if (L % 4 != 0 || L < D * 4 || L > (D+C)*4)
     		{
     			cout << "no\n";
@@ -48,3 +47,15 @@
  
     	return 0;
     }
+
+Psudo code : 
+
+1. Take number of tests as input T
+2. Perform all validity checks on T(1 ≤ T ≤ 105)
+3. for a while loop perform (c >= '0' && c <= '9')
+4. then apply formula of it
+5. if not perform then the integer returns
+6. perform all validity checks on 0 ≤ C, D, L ≤ 109
+7. if the cat and dog legs counted then it will be performed 
+8. if (L % 4 != 0 || L < D * 4 || L > (D+C)*4) it will print no
+9. else it will perform C > ((L/4)-D + D*2)) then prints no else yes
