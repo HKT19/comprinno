@@ -87,3 +87,18 @@ int main()
 }
 }
    
+   
+   
+ Psudo code :
+ 
+1. Take number of tests as input - T
+2. Perform all validity checks on T(1≤T≤10)
+3. For a loop in range 0 to (T-1), take numbers to be added, t, i
+4. perform all validity checks 1≤|S|≤10^5
+5. if flag is true then s take as string input
+6. iterating over the string if testcases set to be in a condition
+7. if flag is true then checking equal to 1 , then print DYNAMIC
+8. Else if it is not equal to 1 , then print NOT
+
+
+
