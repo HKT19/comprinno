@@ -12,3 +12,13 @@ int main(){
 	}
 	return 0;
 }
+
+Psudo code
+
+1. Take number of tests as input - T
+2. Perform all validity checks on T (1 ≤ T ≤ 1000)
+3. For a loop in range 0 to (T-1), take numbers to be added, tc and T.
+4. Perform all validity checks on T (1 ≤ salary ≤ 100000)
+5. If n<1500 print n+n/10+(9*n)/10
+6. else print n+500+(98*n)/100
+7. or else it will return 0
